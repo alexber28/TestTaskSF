@@ -1,0 +1,18 @@
+<template>
+    <div class="slds-var-m-around_medium">
+        <template if:true={cases}>
+            <div>
+                <button class="slds-button slds-button_brand" onclick={refresh}>Refresh table</button>
+            </div>
+            <c-custom-type-picklist
+                key-field="id"
+                data={cases}
+                show-row-number-column
+                hide-checkbox-column
+                columns={columns}
+                draft-values={ldsItemValues}
+                onreloadtable={handleSave} >
+            </c-custom-type-picklist>
+        </template>
+    </div>
+</template>

@@ -1,0 +1,14 @@
+<template>
+    <div>
+        <button class="slds-button slds-button_brand" onclick={handleClick1}>Click me</button>
+    </div>
+    <lightning-combobox
+        name="picklist"
+        label={typeAttributes.label}
+        value={typeAttributes.value}
+        placeholder={typeAttributes.placeholder}
+        options={typeAttributes.options}
+        onchange={handleChange}
+        onclick={handleClick}>
+    </lightning-combobox>
+</template>
