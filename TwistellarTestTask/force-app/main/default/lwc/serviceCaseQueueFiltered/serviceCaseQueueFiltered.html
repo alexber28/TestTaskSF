@@ -7,6 +7,10 @@
             </lightning-spinner>
         </div>
         
+        <div style="text-align: right;">
+            <button class="slds-button slds-button_brand" onclick={refresh}>Refresh table</button>
+        </div>
+        
         <div class="slds-var-p-around_small">
             <template if:true={data}>
                 <c-l-w-c-custom-datatable-type
