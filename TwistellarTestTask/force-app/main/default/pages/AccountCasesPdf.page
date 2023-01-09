@@ -1,0 +1,64 @@
+<apex:page controller="AccountCasesPdfCtrl" renderAs="pdf" label="Account Cases Pdf" applyHtmlTag="false" showHeader="false">
+   <html>
+      <head>
+         <style>
+            * {
+            box-sizing: border-box;
+            }
+            
+            
+            .box--full {
+            float: left;
+            width: 100%;
+            }
+            
+            table {
+            border-collapse: collapse;
+            margin-top: 25px;
+            width: 100%;
+            }
+            
+            th {
+            background-color: #92d5f0;
+            font-align: left;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 5px;
+            }
+            
+            td {
+            font-size: 12px;
+            padding: 5px;
+            text-align: left;
+            width: 33%;
+            }                
+         </style>
+      </head>
+      <body>
+         <div class="box-full">
+            <h2 class="heading heading--sub">Last Week Cases</h2>
+            <table>
+                  <tr>
+                     <th>Account Name</th>
+                     <th>Account Owner Name</th>
+                     <th>Case Number</th>
+                     <th>Status</th>
+                     <th>Priority</th>
+                     <th>Origin</th>
+                  </tr>
+                  <apex:repeat value="{!accountCasesPrevWeek}" var="cs">
+                     <tr>
+                        <td>{!cs.Account.Name}</td>
+                        <td>{!cs.Account.Owner.Name}</td>
+                        <td>{!cs.CaseNumber}</td>
+                        <td>{!cs.Status}</td>
+                        <td>{!cs.Priority}</td>
+                        <td>{!cs.Origin}</td>
+                     </tr>
+                  </apex:repeat>
+            </table>
+         </div>
+         
+      </body>
+   </html>
+</apex:page>

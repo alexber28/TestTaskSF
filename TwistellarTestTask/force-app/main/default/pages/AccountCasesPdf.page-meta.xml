@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This is a sample Visualforce page.</description>
+    <apiVersion>55.0</apiVersion>
+    <label>Last Week Cases PDF</label>
+</ApexPage>
